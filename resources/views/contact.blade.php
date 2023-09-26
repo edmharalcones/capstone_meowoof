@@ -48,22 +48,22 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"  style="margin-right: 40px;">
           <ul class="navbar-nav" style="display:flex; justify-content:end;">
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('pets') }}">Pets</a>
+                  <a class="nav-link" href="pets.html">Pets</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('petcare') }}">Pet Care</a>
+                  <a class="nav-link" href="petcare.html">Pet Care</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('donate') }}" >Donate</a>
+                  <a class="nav-link" href="donate.html" >Donate</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('about') }}">About the Shelter</a>
+                  <a class="nav-link" href="about.html">About the Shelter</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('faq') }}" >FAQ</a>
+                <a class="nav-link" href="faq.html" >FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('contact') }}" >Contact</a>
+              <a class="nav-link" href="contact.html" >Contact</a>
           </li>
             <li class="nav-item">
               <div class="container">
