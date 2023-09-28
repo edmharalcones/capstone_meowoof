@@ -13,24 +13,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="resources/icon.png">
     <style>
-      #header{
-        position: relative;
-        left: 25%;
-        padding-top: 30%;
-        padding-bottom: 1%;
-      }
+  
+  .col-3{
+  position: relative;
+  padding:10px;
+  overflow: hidden;
+  width: 25%;
 
+}
 
 @media screen and (max-width: 600px) {
-  #header{
-    left: 0%;
-    padding-top: 5%;
-    padding-bottom: 0%;
+  .col-3{
+    width: 50%;
   }
 }
 
 
-    </style>
+.col-3:hover img{
+  transform: scale(1.1, 1.1);
+
+  transition: all 2s ease-in-out;
+}
+
+.col-3:hover div {
+  opacity: 1;
+
+}
+.col-3 div {
+  position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.1, 1.1);
+    transition: all 0.2s ease-in;
+}
+
+.cover{
+  display: flex;
+  position: relative;
+  top: 80%;
+  left: 10%;
+  height:auto;
+  width:50%;
+
+}
+
+  
+</style>
     <title>Meowoof!</title>
 </head>
 <body>
@@ -48,22 +79,22 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"  style="margin-right: 40px;">
           <ul class="navbar-nav" style="display:flex; justify-content:end;">
               <li class="nav-item">
-                  <a class="nav-link" href="pets.html">Pets</a>
+                  <a class="nav-link" href="{{ route('pets') }}">Pets</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="petcare.html">Pet Care</a>
+                  <a class="nav-link" href="{{ route('petcare') }}">Pet Care</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="donate.html" >Donate</a>
+                  <a class="nav-link" href="{{ route('donate') }}" >Donate</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about.html">About the Shelter</a>
+                  <a class="nav-link" href="{{ route('about') }}">About the Shelter</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq.html" >FAQ</a>
+                <a class="nav-link" href="{{ route('faq') }}" >FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html" >Contact</a>
+              <a class="nav-link" href="{{ route('contact') }}" >Contact</a>
           </li>
             <li class="nav-item">
               <div class="container">
@@ -108,253 +139,135 @@
         </div>
     </div>
 </div> 
+
 <br>
-<!-- Quote -->
-<div class="container-fluid">
-  <div class="row">
-      <!-- link -->
-      <div class="col-12 col-md-4 d-flex order-md-0">
-        <div class="col d-flex flex-column" id="header">
-              <h1 style="font-weight: 700; text-align:left;" class="headers">EVERY PET DESERVES A HOME.</h1>
-              <br>
-             <p class="indextext" >Discover the incredible joy of finding your new best friend and creating an unbreakable bond that will warm your heart.
-            <br><br> By choosing adoption, you're not just welcoming a pet into your home; you're becoming a hero, offering a second chance at life to a deserving soul.
-            It's a rewarding experience that will leave an indelible paw print on your heart.
-          </p>
-         
- 
+<!-- Header note -->
 <br>
-          <div class="d-flex align-items-center justify-content-left" style="padding-top: 20px;">
-            <a class="btn-secondary text-nowrap" href="pets.html" role="button">Adopt today!</a>
-          </div>
-        </div>
-        
-      </div>
-      
-      <!-- center photo -->
-      <div class="col-12 col-md-7 d-flex order-md-1 justify-content-end p-0" >
-          <img src="resources/center.png" class="center">
-      </div>
-  </div>
+<div class=" col jumbotron jumbotron-fluid text-center">
+  <div class="container ps-auto">
+<h5 class="display-5 headers" style="text-align: center;">Take us home.</h5>
+<br>
+
 </div>
-  <br>
-  <br>
-  <br>
-  <br>
-    <!-- featured pets -->
- 
-  
-  <div class="container-fluid" >
-    <div class="row">
-      <div class="col-6 p-0" >
-          <div class=" col jumbotron jumbotron-fluid text-center">
-            <div class="container ps-auto">
-              <h5 class="display-6 headers" >Cat of the Week</h5>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-evenly p-0">
-            <img class="feature" src="resources/catoftheweek.png"/>
-          </div>  
-      </div>
-      <div class="col-6  p-0">
-        <div class=" col jumbotron jumbotron-fluid text-center">
-          <div class="container ps-auto">
-            <h5 class="display-6 headers" >Dog of the Week</h5>
-          </div>
-        </div>
-          <div class="col d-flex justify-content-evenly p-0" >
-            <img class="feature" src="resources/dogoftheweek.png">
-            </div>
-      </div>
+</div>
+  <!-- photos -->
+   <div class="container">
+    <div class="col-12 d-flex justify-content-center">
+      <p class="filter" style="padding-left: 2%; padding-right: 2%;">All</p>
+      <p class="filter" style="padding-left: 2%; padding-right: 2%;">Cats</p>
+      <p class="filter"style="padding-left: 2%; padding-right: 2%;">Dogs</p>
     </div>
-    <br>
-    <div class="col-12  justify-content-end px-5 d-flex" >
-      <a href="pets.html" role="button" class="btn-pets text-nowrap">View all pets</a>
+    <div class="row">
+          <div class="col-3">
+            <img src="resources/cat1-haru.png" class="gallery">
+            <div>
+              <img src="resources/Haru.png"  class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/cat2-dot.png" class="gallery">
+            <div>
+              <img src="resources/Dot.png"  class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/cat3-boots.png" class="gallery">
+            <div>
+              <img src="resources/Boots.png" class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/cat4-lunch.png" class="gallery">
+            <div>
+              <img src="resources/Lunch.png"  class="cover">
+              
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/cat5-noa.png" class="gallery">
+            <div>
+              <img src="resources/Noa.png"  class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/cat6-joji.png" class="gallery">
+            <div>
+              <img src="resources/Joji.png"  class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/cat7-ichi.png" class="gallery">
+            <div>
+              <img src="resources/Ichi.png" class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/cat8-dash.png" class="gallery">
+            <div>
+              <img src="resources/Dash.png"  class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog1-duke.png" class="gallery">
+            <div>
+              <img src="resources/Duke.png" class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog2-rocky.png" class="gallery">
+            <div>
+              <img src="resources/Rocky.png" class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog3-mylo.png" class="gallery">
+            <div>
+              <img src="resources/Mylo.png" class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog4-lucy.png" class="gallery">
+            <div>
+              <img src="resources/Lucy.png"  class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog5-nori.png" class="gallery">
+            <div>
+              <img src="resources/Nori.png" class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog6-max.png" class="gallery">
+            <div>
+              <img src="resources/Max.png"  class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog7-charlie.png" class="gallery">
+            <div>
+              <img src="resources/Charlie.png" class="cover">
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="resources/dog8-peri.png" class="gallery">
+            <div>
+              <img src="resources/Peri.png"  class="cover">
+            </div>
+          </div>
+
+       </div> <br> <br> <br> <br> <br>
+      </div>
+      <div class=" col jumbotron jumbotron-fluid text-center">
+            <div class="container ps-auto">
+      <h5 class="display-5 headers" style="text-align: center;">How it works?</h5> <br> 
     </div>
   </div>
-
-  <!-- Donate -->
-<br>
-<br>
-
-  <div id="footer" class="py-5"  >
-    <div class="container text-center" >
-         <h2  class="headers" style="font-weight: 600;">Can't adopt? No problem! <br> You can make an impact by supporting our cause!</h2> <br>
-         <a href="donate.html" class="btn-tertiary" style=" padding: 0; margin: 0;"><img src="resources/donate.png" style=" display: flex; position: relative; right: 92px;"  width="250px" height="250px"></a>
-       </div>
-     </div>  
-
-    <!-- Testimonials -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class=" col jumbotron jumbotron-fluid text-left" >
-      <div class="container-fluid" >
-        <h5 class="display-6 d-flex headers" style="position: absolute; left: 9%;" >HAPPY  CLIENTS</h5>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="slider" class="carousel slide carousel-dark text-center" data-interval="false">
-      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
- 
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-          <!-- 1st slide -->
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                    src="resources/Anna.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Anna</h4>
-                  <p class="comment">
-        
-                    "I had an amazing experience adopting a dog from Meowoof. Our new dog is full of 
-                    love and brings so much happiness to our home."
-                  </p>
-                
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                    src="resources/Alex.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Alex</h4>
-                  <p class="comment">
-                
-                    "Felix has fit so wonderfully into our home. He is very sweet and give us lots of 
-                    laugh. Thank you, Meowoof."
-                  </p>
-              
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Mia.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Mia</h4>
-                  <p class="comment">
-                    "I adopted a cat that we fell in love with from Meowoof. She is a lovely and quiet girl."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- 2nd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Kate.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Kate</h4>
-                  <p class="comment">
-                 
-                    "Mango is one of the best things that has ever happened to me. Having a dog 
-                    from Meowoof is pure happiness."
-
-                  </p>
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Ben.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Ben</h4>
-                  <p class="comment">
-                 
-                    "Meowoof helped us find a calm and gentle dog that fits perfectly 
-                    into our lifestyle."
-
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Dan.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Dan</h4>
-                  <p class="comment">
-                   
-                    "Tiger was the first dog we saw and it was love at first sight. 
-                    He is an adorable addition to our family. Thanks, Meowoof."
-                  </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- 3rd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Rob.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Rob</h4>
-                  <p class="comment">
-            
-                    "We adopted a senior cat from Meowoof and it was the best decision we 
-                    ever made. She brings so much warmth and comfort to our home."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Nina.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Nina</h4>
-                  <p class="comment">
-             
-                    "Thank you, Meowoof, for the wonderful experience adopting Sage. 
-                    She is the sweetest girl."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Maddie.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Maddie</h4>
-                  <p class="comment">
-                 
-                    "Batman has brought new joy to our family. Thank you, Meowoof."
-
-                  </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src="resources/adoption.png"  class="steps">
+      <br>
      
-<br>
-<br>
-<br>
-<br>
-
+      <br>
+    
 <!-- Footer -->
 <footer>
   <hr>
@@ -377,5 +290,7 @@
   </div>
   <br>
 </footer>
+
+
 </body>
 </html>

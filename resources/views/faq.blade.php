@@ -12,25 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="resources/icon.png">
-    <style>
-      #header{
-        position: relative;
-        left: 25%;
-        padding-top: 30%;
-        padding-bottom: 1%;
-      }
-
-
-@media screen and (max-width: 600px) {
-  #header{
-    left: 0%;
-    padding-top: 5%;
-    padding-bottom: 0%;
-  }
-}
-
-
-    </style>
     <title>Meowoof!</title>
 </head>
 <body>
@@ -48,22 +29,22 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"  style="margin-right: 40px;">
           <ul class="navbar-nav" style="display:flex; justify-content:end;">
               <li class="nav-item">
-                  <a class="nav-link" href="pets.html">Pets</a>
+                  <a class="nav-link" href="{{ route('pets') }}">Pets</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="petcare.html">Pet Care</a>
+                  <a class="nav-link" href="{{ route('petcare') }}">Pet Care</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="donate.html" >Donate</a>
+                  <a class="nav-link" href="{{ route('donate') }}" >Donate</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about.html">About the Shelter</a>
+                  <a class="nav-link" href="{{ route('about') }}">About the Shelter</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq.html" >FAQ</a>
+                <a class="nav-link" href="{{ route('faq') }}" >FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html" >Contact</a>
+              <a class="nav-link" href="{{ route('contact') }}" >Contact</a>
           </li>
             <li class="nav-item">
               <div class="container">
@@ -108,253 +89,129 @@
         </div>
     </div>
 </div> 
+
 <br>
-<!-- Quote -->
-<div class="container-fluid">
-  <div class="row">
-      <!-- link -->
-      <div class="col-12 col-md-4 d-flex order-md-0">
-        <div class="col d-flex flex-column" id="header">
-              <h1 style="font-weight: 700; text-align:left;" class="headers">EVERY PET DESERVES A HOME.</h1>
-              <br>
-             <p class="indextext" >Discover the incredible joy of finding your new best friend and creating an unbreakable bond that will warm your heart.
-            <br><br> By choosing adoption, you're not just welcoming a pet into your home; you're becoming a hero, offering a second chance at life to a deserving soul.
-            It's a rewarding experience that will leave an indelible paw print on your heart.
-          </p>
-         
- 
+<!-- FAQ -->
 <br>
-          <div class="d-flex align-items-center justify-content-left" style="padding-top: 20px;">
-            <a class="btn-secondary text-nowrap" href="pets.html" role="button">Adopt today!</a>
+<div class="col jumbotron jumbotron-fluid text-center">
+    <div class="container ps-auto">
+        <h5 class="display-5 headers" style="text-align: center;">Frequently Asked Questions</h5>
+        <br>
+    </div>
+</div>
+
+<div class="container">
+    <div class="accordion accordion-flush custom-accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+           <strong> How do I adopt a pet?</strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            To adopt a pet, follow these steps: choose your future pet, email us to schedule an appointment,
+             meet the pet you love, fill out the adoption forms, and take your new pet home.
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <strong>What is the adoption fee for a pet?</strong>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            The adoption fee for cats is P500, and for dogs, it's P1000. This fee covers your pet's 
+            spay/neuter surgery, vaccinations, and tick+flea treatment.
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong>Are the pets at the shelter spayed/neutered?</strong>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            Yes, all our pets are spayed/neutered to ensure their health and promote responsible pet ownership.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <strong>Can I adopt a specific breed or type of pet?</strong>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            While we rarely have purebred cats or dogs, we occasionally have specific breeds available. However,
+             we encourage you to have an open mind and consider adopting 
+            based on personality and compatibility rather than breed alone.
           </div>
         </div>
-        
       </div>
-      
-      <!-- center photo -->
-      <div class="col-12 col-md-7 d-flex order-md-1 justify-content-end p-0" >
-          <img src="resources/center.png" class="center">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        <strong> Can I return my adopted pet if I change my mind?</strong>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            If you find yourself unable to keep your adopted pet, we kindly request that 
+            you return them to us. We will then find another loving home for them.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        <strong> Can I visit the shelter to meet the pets before deciding to adopt?</strong>
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Absolutely! We highly encourage potential adopters to visit our shelter and spend time with the pets. 
+            It allows you to interact 
+            with them, observe their behavior, and see if you form a connection. 
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+        <strong>Can I adopt more than one pet?</strong>
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Yes, you can adopt more than one pet, especially if the pets you wish to adopt belong to a bonded pair. 
+            We believe in promoting the happiness and well-being of our pets and will guide you through the process 
+            of adopting multiple pets.
+
+          </div>
+        </div>
       </div>
   </div>
 </div>
-  <br>
-  <br>
-  <br>
-  <br>
-    <!-- featured pets -->
- 
-  
-  <div class="container-fluid" >
-    <div class="row">
-      <div class="col-6 p-0" >
-          <div class=" col jumbotron jumbotron-fluid text-center">
-            <div class="container ps-auto">
-              <h5 class="display-6 headers" >Cat of the Week</h5>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-evenly p-0">
-            <img class="feature" src="resources/catoftheweek.png"/>
-          </div>  
-      </div>
-      <div class="col-6  p-0">
-        <div class=" col jumbotron jumbotron-fluid text-center">
-          <div class="container ps-auto">
-            <h5 class="display-6 headers" >Dog of the Week</h5>
-          </div>
-        </div>
-          <div class="col d-flex justify-content-evenly p-0" >
-            <img class="feature" src="resources/dogoftheweek.png">
-            </div>
-      </div>
-    </div>
-    <br>
-    <div class="col-12  justify-content-end px-5 d-flex" >
-      <a href="pets.html" role="button" class="btn-pets text-nowrap">View all pets</a>
-    </div>
-  </div>
-
-  <!-- Donate -->
-<br>
-<br>
-
-  <div id="footer" class="py-5"  >
-    <div class="container text-center" >
-         <h2  class="headers" style="font-weight: 600;">Can't adopt? No problem! <br> You can make an impact by supporting our cause!</h2> <br>
-         <a href="donate.html" class="btn-tertiary" style=" padding: 0; margin: 0;"><img src="resources/donate.png" style=" display: flex; position: relative; right: 92px;"  width="250px" height="250px"></a>
-       </div>
-     </div>  
-
-    <!-- Testimonials -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class=" col jumbotron jumbotron-fluid text-left" >
-      <div class="container-fluid" >
-        <h5 class="display-6 d-flex headers" style="position: absolute; left: 9%;" >HAPPY  CLIENTS</h5>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="slider" class="carousel slide carousel-dark text-center" data-interval="false">
-      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
- 
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-          <!-- 1st slide -->
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                    src="resources/Anna.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Anna</h4>
-                  <p class="comment">
-        
-                    "I had an amazing experience adopting a dog from Meowoof. Our new dog is full of 
-                    love and brings so much happiness to our home."
-                  </p>
-                
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                    src="resources/Alex.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Alex</h4>
-                  <p class="comment">
-                
-                    "Felix has fit so wonderfully into our home. He is very sweet and give us lots of 
-                    laugh. Thank you, Meowoof."
-                  </p>
-              
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Mia.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Mia</h4>
-                  <p class="comment">
-                    "I adopted a cat that we fell in love with from Meowoof. She is a lovely and quiet girl."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- 2nd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Kate.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Kate</h4>
-                  <p class="comment">
-                 
-                    "Mango is one of the best things that has ever happened to me. Having a dog 
-                    from Meowoof is pure happiness."
-
-                  </p>
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Ben.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Ben</h4>
-                  <p class="comment">
-                 
-                    "Meowoof helped us find a calm and gentle dog that fits perfectly 
-                    into our lifestyle."
-
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Dan.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Dan</h4>
-                  <p class="comment">
-                   
-                    "Tiger was the first dog we saw and it was love at first sight. 
-                    He is an adorable addition to our family. Thanks, Meowoof."
-                  </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- 3rd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Rob.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Rob</h4>
-                  <p class="comment">
-            
-                    "We adopted a senior cat from Meowoof and it was the best decision we 
-                    ever made. She brings so much warmth and comfort to our home."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Nina.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Nina</h4>
-                  <p class="comment">
-             
-                    "Thank you, Meowoof, for the wonderful experience adopting Sage. 
-                    She is the sweetest girl."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Maddie.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Maddie</h4>
-                  <p class="comment">
-                 
-                    "Batman has brought new joy to our family. Thank you, Meowoof."
-
-                  </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-     
+ <br>
 <br>
 <br>
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <!-- Footer -->
 <footer>
   <hr>

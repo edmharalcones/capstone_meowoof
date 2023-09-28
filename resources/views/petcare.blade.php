@@ -13,24 +13,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="resources/icon.png">
     <style>
-      #header{
-        position: relative;
-        left: 25%;
-        padding-top: 30%;
-        padding-bottom: 1%;
-      }
-
+     
+     .card{
+      position: relative;
+      padding:10px;
+      margin: 10px;
+      overflow: hidden;
+}
 
 @media screen and (max-width: 600px) {
-  #header{
-    left: 0%;
-    padding-top: 5%;
-    padding-bottom: 0%;
+  .card{
+    width: 50%;
+    height: auto;
   }
 }
 
 
+
     </style>
+
     <title>Meowoof!</title>
 </head>
 <body>
@@ -48,22 +49,22 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"  style="margin-right: 40px;">
           <ul class="navbar-nav" style="display:flex; justify-content:end;">
               <li class="nav-item">
-                  <a class="nav-link" href="pets.html">Pets</a>
+                  <a class="nav-link" href="{{ route('pets') }}">Pets</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="petcare.html">Pet Care</a>
+                  <a class="nav-link" href="{{ route('petcare') }}">Pet Care</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="donate.html" >Donate</a>
+                  <a class="nav-link" href="{{ route('donate') }}" >Donate</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about.html">About the Shelter</a>
+                  <a class="nav-link" href="{{ route('about') }}">About the Shelter</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq.html" >FAQ</a>
+                <a class="nav-link" href="{{ route('faq') }}" >FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html" >Contact</a>
+              <a class="nav-link" href="{{ route('contact') }}" >Contact</a>
           </li>
             <li class="nav-item">
               <div class="container">
@@ -108,274 +109,133 @@
         </div>
     </div>
 </div> 
-<br>
-<!-- Quote -->
-<div class="container-fluid">
-  <div class="row">
-      <!-- link -->
-      <div class="col-12 col-md-4 d-flex order-md-0">
-        <div class="col d-flex flex-column" id="header">
-              <h1 style="font-weight: 700; text-align:left;" class="headers">EVERY PET DESERVES A HOME.</h1>
-              <br>
-             <p class="indextext" >Discover the incredible joy of finding your new best friend and creating an unbreakable bond that will warm your heart.
-            <br><br> By choosing adoption, you're not just welcoming a pet into your home; you're becoming a hero, offering a second chance at life to a deserving soul.
-            It's a rewarding experience that will leave an indelible paw print on your heart.
-          </p>
-         
  
 <br>
-          <div class="d-flex align-items-center justify-content-left" style="padding-top: 20px;">
-            <a class="btn-secondary text-nowrap" href="pets.html" role="button">Adopt today!</a>
-          </div>
-        </div>
-        
-      </div>
-      
-      <!-- center photo -->
-      <div class="col-12 col-md-7 d-flex order-md-1 justify-content-end p-0" >
-          <img src="resources/center.png" class="center">
-      </div>
-  </div>
-</div>
-  <br>
-  <br>
-  <br>
-  <br>
-    <!-- featured pets -->
- 
+<!-- Pet Care -->
   
-  <div class="container-fluid" >
-    <div class="row">
-      <div class="col-6 p-0" >
-          <div class=" col jumbotron jumbotron-fluid text-center">
-            <div class="container ps-auto">
-              <h5 class="display-6 headers" >Cat of the Week</h5>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-evenly p-0">
-            <img class="feature" src="resources/catoftheweek.png"/>
-          </div>  
-      </div>
-      <div class="col-6  p-0">
-        <div class=" col jumbotron jumbotron-fluid text-center">
-          <div class="container ps-auto">
-            <h5 class="display-6 headers" >Dog of the Week</h5>
-          </div>
-        </div>
-          <div class="col d-flex justify-content-evenly p-0" >
-            <img class="feature" src="resources/dogoftheweek.png">
-            </div>
-      </div>
-    </div>
-    <br>
-    <div class="col-12  justify-content-end px-5 d-flex" >
-      <a href="pets.html" role="button" class="btn-pets text-nowrap">View all pets</a>
+<div class="container ">
+  <div class="row d-flex justify-content-center">
+
+      <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/catcare.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">General Cat Care</h5>
+      <p class="text">Useful tips for new cat parents, and for those looking to brush up on their cat care skills.</p>
+      <a href="https://www.aspca.org/pet-care/cat-care/general-cat-care" target="_blank" class="btn-petcare">Learn More</a>
     </div>
   </div>
 
-  <!-- Donate -->
-<br>
-<br>
 
-  <div id="footer" class="py-5"  >
-    <div class="container text-center" >
-         <h2  class="headers" style="font-weight: 600;">Can't adopt? No problem! <br> You can make an impact by supporting our cause!</h2> <br>
-         <a href="donate.html" class="btn-tertiary" style=" padding: 0; margin: 0;"><img src="resources/donate.png" style=" display: flex; position: relative; right: 92px;"  width="250px" height="250px"></a>
-       </div>
-     </div>  
 
-    <!-- Testimonials -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class=" col jumbotron jumbotron-fluid text-left" >
-      <div class="container-fluid" >
-        <h5 class="display-6 d-flex headers" style="position: absolute; left: 9%;" >HAPPY  CLIENTS</h5>
-      </div>
+  <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/dogcare.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">General Dog Care</h5>
+      <p class="text">It's important to keep your canine companion's health and happiness a top priority.</p>
+      <a href="https://www.aspca.org/pet-care/dog-care/general-dog-care" target="_blank" class="btn-petcare">Learn More</a>
     </div>
-    <br>
-    <br>
-    <br>
-    <div id="slider" class="carousel slide carousel-dark text-center" data-interval="false">
-      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
- 
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-          <!-- 1st slide -->
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                    src="resources/Anna.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Anna</h4>
-                  <p class="comment">
-        
-                    "I had an amazing experience adopting a dog from Meowoof. Our new dog is full of 
-                    love and brings so much happiness to our home."
-                  </p>
-                
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                    src="resources/Alex.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Alex</h4>
-                  <p class="comment">
-                
-                    "Felix has fit so wonderfully into our home. He is very sweet and give us lots of 
-                    laugh. Thank you, Meowoof."
-                  </p>
-              
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Mia.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Mia</h4>
-                  <p class="comment">
-                    "I adopted a cat that we fell in love with from Meowoof. She is a lovely and quiet girl."
-                  </p>
-                </div>
-              </div>
+  </div>
+
+
+
+  <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/catvax.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">Cat Vaccinations</h5>
+      <p class="text">The importance of vaccinations to the overall health and longevity of your cat cannot be understated.</p>
+      <a href="https://www.rauanimalhospital.com/services/cats/vaccinations"  target="_blank" class="btn-petcare">Learn More</a>
+    </div>
+  </div>
+
+
+
+  <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/dogvax.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">Dog Vaccinations</h5>
+      <p class="text">Veterinarians recommend certain vaccines for all dogs, while others are used more selectively.</p>
+      <a href="https://vcahospitals.com/know-your-pet/vaccines-for-dogs" target="_blank" class="btn-petcare">Learn More</a>
+    </div>
+  </div>
+
+
+
+    <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/spayneuter.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">Spaying and Neutering</h5>
+      <p class="text">Early spaying of female dogs and cats can help protect them from some serious health problems.</p>
+      <a href="https://www.avma.org/resources/pet-owners/petcare/spaying-and-neutering" target="_blank" class="btn-petcare">Learn More</a>
+    </div>
+  </div>
+
+
+
+
+    <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/dogexercise.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">Dog Exercise</h5>
+      <p class="text">Keeping your dog active and well-exercised does more than keeping your pet in shape.</p>
+      <a href="https://www.purina.co.uk/articles/dogs/health/exercise/exercising-to-stay-healthy" target="_blank" class="btn-petcare">Learn More</a>
+    </div>
+  </div>
+
+
+
+    <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/catdiet.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">Best Diet for Cats</h5>
+      <p class="text">Instead of sweating over the ingredient list, pay attention to the nutrients in your cat food.</p>
+      <a href="https://www.rd.com/list/best-diet-for-cats/" target="_blank" class="btn-petcare">Learn More</a>
+    </div>
+  </div>
+
+
+
+    <div class=" col-3 py-5 card" style="width: 18rem;">
+    <img src="resources/dogdiet.png" class="card-img" alt="...">
+    <div class="body">
+      <h5 class="title">Best Diet for Dogs</h5>
+      <p class="text">A high-quality diet, after all, is key to helping your dog live longer and healthier.</p>
+      <a href="https://www.rd.com/list/best-diet-for-dogs-according-to-vets/" target="_blank" class="btn-petcare">Learn More</a>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+      <!-- Footer -->
+      <footer>
+        <hr>
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-4 order-1 order-md-0 d-flex justify-content-center mb-3 mb-md-0">
+              <img src="resources/copyright.png" style="width: 12px; height: 12px;">
+              <p class="text-nowrap" style="font-size: 10px;">2023 by Edmhar Alcones</p>
             </div>
-          </div>
-      
-          <!-- 2nd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Kate.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Kate</h4>
-                  <p class="comment">
-                 
-                    "Mango is one of the best things that has ever happened to me. Having a dog 
-                    from Meowoof is pure happiness."
-
-                  </p>
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Ben.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Ben</h4>
-                  <p class="comment">
-                 
-                    "Meowoof helped us find a calm and gentle dog that fits perfectly 
-                    into our lifestyle."
-
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Dan.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Dan</h4>
-                  <p class="comment">
-                   
-                    "Tiger was the first dog we saw and it was love at first sight. 
-                    He is an adorable addition to our family. Thanks, Meowoof."
-                  </p>
-                 
-                </div>
-              </div>
+            <div class="col-12 col-md-4 order-0 order-md-1 d-flex justify-content-center mb-3 mb-md-0">
+              <a href="https://www.facebook.com/" target="_blank"><img src="resources/fb.png" class="socials"></a>
+              <a href="https://www.tiktok.com/en/" target="_blank"><img src="resources/tiktok.png" class="socials"></a>
+              <a href="https://www.instagram.com/" target="_blank"><img src="resources/ig.png" class="socials"></a>
+              <a href="https://www.youtube.com//" target="_blank"><img src="resources/yt.png" class="socials"></a>
             </div>
-          </div>
-      
-          <!-- 3rd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Rob.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Rob</h4>
-                  <p class="comment">
-            
-                    "We adopted a senior cat from Meowoof and it was the best decision we 
-                    ever made. She brings so much warmth and comfort to our home."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Nina.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Nina</h4>
-                  <p class="comment">
-             
-                    "Thank you, Meowoof, for the wonderful experience adopting Sage. 
-                    She is the sweetest girl."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Maddie.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Maddie</h4>
-                  <p class="comment">
-                 
-                    "Batman has brought new joy to our family. Thank you, Meowoof."
-
-                  </p>
-                 
-                </div>
-              </div>
+            <div class="col-12 col-md-4 order-2 order-md-2 d-flex justify-content-center">
+              <a href="terms.html" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
             </div>
           </div>
         </div>
-      </div>
-     
-<br>
-<br>
-<br>
-<br>
-
-<!-- Footer -->
-<footer>
-  <hr>
-  <div class="container-fluid">
-    <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-12 col-md-4 order-1 order-md-0 d-flex justify-content-center mb-3 mb-md-0">
-        <img src="resources/copyright.png" style="width: 12px; height: 12px;">
-        <p class="text-nowrap" style="font-size: 10px;">2023 by Edmhar Alcones</p>
-      </div>
-      <div class="col-12 col-md-4 order-0 order-md-1 d-flex justify-content-center mb-3 mb-md-0">
-        <a href="https://www.facebook.com/" target="_blank"><img src="resources/fb.png" class="socials"></a>
-        <a href="https://www.tiktok.com/en/" target="_blank"><img src="resources/tiktok.png" class="socials"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="resources/ig.png" class="socials"></a>
-        <a href="https://www.youtube.com//" target="_blank"><img src="resources/yt.png" class="socials"></a>
-      </div>
-      <div class="col-12 col-md-4 order-2 order-md-2 d-flex justify-content-center">
-        <a href="terms.html" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
-      </div>
-    </div>
-  </div>
-  <br>
-</footer>
-</body>
-</html>
+        <br>
+      </footer>
+      
+   
+   </body>
+   </html>
