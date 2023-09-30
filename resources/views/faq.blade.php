@@ -20,7 +20,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
       <div class="navbar-brands" >
-        <a class="nav-link" href="index.html" ><img src="resources/logo.png" class="logo"></a>
+        <a class="nav-link" href="{{ route('welcome') }}" ><img src="resources/logo.png" class="logo"></a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,9 @@
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('donate') }}" >Donate</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('review') }}" >Review</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('about') }}">About the Shelter</a>

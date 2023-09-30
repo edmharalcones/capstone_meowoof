@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/about', function () {
     return view('about');
@@ -25,6 +25,10 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/review', function () {
+    return view('review');
+})->name('review');
 
 Route::get('/donate', function () {
     return view('donate');

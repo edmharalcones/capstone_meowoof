@@ -39,7 +39,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
       <div class="navbar-brands" >
-        <a class="nav-link" href="index.html" ><img src="resources/logo.png" class="logo"></a>
+        <a class="nav-link" href="{{ route('welcome') }}" ><img src="resources/logo.png" class="logo"></a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,9 @@
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('donate') }}" >Donate</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('review') }}" >Review</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('about') }}">About the Shelter</a>
@@ -125,7 +128,7 @@
  
 <br>
           <div class="d-flex align-items-center justify-content-left" style="padding-top: 20px;">
-            <a class="btn-secondary text-nowrap" href="pets.html" role="button">Adopt today!</a>
+            <a class="btn-secondary text-nowrap" href="{{ route('pets') }}" role="button">Adopt today!</a>
           </div>
         </div>
         
@@ -352,6 +355,10 @@
      
 <br>
 <br>
+          <div class="d-flex align-items-center justify-content-center" style="padding-top: 20px;">
+            <a class="btn-secondary text-nowrap" href="{{ route('review') }}" role="button">Write us a review!</a>
+          </div>
+
 <br>
 <br>
 

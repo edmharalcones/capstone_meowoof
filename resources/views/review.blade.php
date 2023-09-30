@@ -99,38 +99,31 @@
         </div>
     </div>
 </div> 
+ 
 <br>
-<!-- Contact -->
+<!-- Review -->
+<div class="col jumbotron jumbotron-fluid text-center">
+    <div class="container ps-auto">
+        <h5 class="display-5 headers" style="text-align: center;">Share Your Adoption Journey</h5>
+        <h6  style="text-align: center;">Tell Us How We Helped! Leave a Review Today and Share Your Experience.</h6>
+        <br>
+    </div>
+</div>
+
+  
 <div class="container-fluid">
 <div class="container">
 
  <form class="needs-validation"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626" method="POST" novalidate> 
-        <label for="name" class="form-label " >Full Name:</label> <br>
-        <input type="text" class="form-control" name="name"   pattern="[a-zA-Z\s]*" required>
+     <label class="form-label" for="photo">Share a pic!</label>
+          <input type="file" name="photo" accept="image/png, image/jpeg" required>
         <br>
-        <label for="email" class="form-label">Email Address:</label>
-        <input type="email" class="form-control"  name="email" required>
-         <br>
-        <label for="validationPhone" class="form-label" >Phone Number:</label>
-          <input type="number" class="form-control" id="validationPhone" required>
-         
-      <br>
+      <label for="name" class="form-label">Your Name:</label>
+      <input type="name" class="form-control"  name="name" required>
+        <br>
       <div class="col">
-        <p>Subject:</p>
-
-        <select class="form-select" name="subject">
-          <option selected value="General inquiry"> General inquiry</option>
-          <option value="Adoption inquiry">Adoption inquiry</option>
-          <option value="Donation inquiry">Donation inquiry</option>
-          <option value="Appointment">Appointment</option>
-          
-        </select>
-      </div>
-      
-        <div class="col">
-          <label for="Message" class="form-label">Message:</label>
-          <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
-
+      <label for="Message" class="form-label">Message:</label>
+      <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
       <div class="col" style="margin-top: 5%;">
         <button class="btn-petcare shadow-none border-0" type="submit">Send</button>
         <input type="hidden" name="_next" value="https://edmharalcones.github.io/MEOWOOF/contact">
@@ -144,30 +137,30 @@
 <br>
 <br>
 <br>
-<!-- Footer -->
-<footer>
-  <hr>
-  <div class="container-fluid">
-    <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-12 col-md-4 order-1 order-md-0 d-flex justify-content-center mb-3 mb-md-0">
-        <img src="resources/copyright.png" style="width: 12px; height: 12px;">
-        <p class="text-nowrap" style="font-size: 10px;">2023 by Edmhar Alcones</p>
-      </div>
-      <div class="col-12 col-md-4 order-0 order-md-1 d-flex justify-content-center mb-3 mb-md-0">
-        <a href="https://www.facebook.com/" target="_blank"><img src="resources/fb.png" class="socials"></a>
-        <a href="https://www.tiktok.com/en/" target="_blank"><img src="resources/tiktok.png" class="socials"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="resources/ig.png" class="socials"></a>
-        <a href="https://www.youtube.com//" target="_blank"><img src="resources/yt.png" class="socials"></a>
-      </div>
-      <div class="col-12 col-md-4 order-2 order-md-2 d-flex justify-content-center">
-        <a href="terms.html" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
-      </div>
-    </div>
-  </div>
-  <br>
-</footer>
 
-
-
-</body>
-</html>
+      <!-- Footer -->
+      <footer>
+        <hr>
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-4 order-1 order-md-0 d-flex justify-content-center mb-3 mb-md-0">
+              <img src="resources/copyright.png" style="width: 12px; height: 12px;">
+              <p class="text-nowrap" style="font-size: 10px;">2023 by Edmhar Alcones</p>
+            </div>
+            <div class="col-12 col-md-4 order-0 order-md-1 d-flex justify-content-center mb-3 mb-md-0">
+              <a href="https://www.facebook.com/" target="_blank"><img src="resources/fb.png" class="socials"></a>
+              <a href="https://www.tiktok.com/en/" target="_blank"><img src="resources/tiktok.png" class="socials"></a>
+              <a href="https://www.instagram.com/" target="_blank"><img src="resources/ig.png" class="socials"></a>
+              <a href="https://www.youtube.com//" target="_blank"><img src="resources/yt.png" class="socials"></a>
+            </div>
+            <div class="col-12 col-md-4 order-2 order-md-2 d-flex justify-content-center">
+              <a href="terms.html" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+        <br>
+      </footer>
+      
+   
+   </body>
+   </html>
