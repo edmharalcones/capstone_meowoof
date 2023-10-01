@@ -19,38 +19,30 @@ class EventController extends Controller
     public function store(Request $request)
 {
     try {
-      
-        $validatedData = $request->validate([
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif',
-            'name' => 'required|string',
-            'review' => 'required|string',
+
+        $event = Review::create([
+            
+            'photo' => $request->photo,
+            'name' => $request->name,
+            'review' => $request->review,
+            
         ]);
-
-
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
-            $filename = time() . $file->getClientOriginalName();
-            $filePath = $file->storeAs('images', $filename, 'public');
+            $filename = time() . $request->file('photo')->getClientOriginalName();
+            $filePath = $request->file('photo')->storeAs('images', $filename, 'public');
             $storagePath = 'storage/' . $filePath;
-        } else {
-            $storagePath = null; 
+            $event->photo = $storagePath;
+            $event->save();
         }
 
-  
-        $review = new Review([
-            'photo' => $storagePath,
-            'name' => $validatedData['name'],
-            'review' => $validatedData['review'],
-        ]);
-
-        
-        $review->save();
-
-        return redirect()->back()->withSuccess('Review saved successfully.');
+       
+        return back()->with('flash_message', 'Review created!');
     } catch (\Exception $e) {
         \Log::error('Database error: ' . $e->getMessage());
-        return back()->withInput()->withErrors(['error' => 'An error occurred while saving the review.']);
+         return back()->withInput()->withErrors(['error' => 'Duplicate entry.']);
     }
 }
+
 
 }

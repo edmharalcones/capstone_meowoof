@@ -25,38 +25,48 @@
                     <tbody>
                         <?php
                             $servername = "localhost";
-                            $username = "root";
-                            $password = "";
-                            $database = "laravel";
+                            $username = "u548574294_root";
+                            $password = "AAaa!!8520";
+                            $database = "u548574294_laravel";
                             $connection = new mysqli($servername, $username, $password, $database);
 
                             if ($connection->connect_error) {
-                                die("Connection failed: " . $connection->connect_error);
-                                }
+                            die("Connection failed: " . $connection->connect_error);
+                            }
 
                             $sql = "SELECT * FROM reviews";
                             $result = $connection->query($sql);
 
                             if (!$result) {
                                 die("Invalid query: " . $connection->error);
-                                }
+                            }
 
                             while ($row = $result->fetch_assoc()) {
                                 echo '<tr>
-                                        <td>' . $row["id"] . '</td>
-                                        <td><img src="' . $row['photo'] . '" width="50" height="50" alt="photo"/></td>
-                                        <td>' . $row["name"] . '</td>
-                                        <td>' . $row["review"] . '</td>
-                                        <td>
-                                            <button class="btn btn-danger btn-sm">
-                                                <a href="' . route('delete', ['id' => $row['id']]) . '" class="text-light">Delete</a>
-                                            </button>
-                                        </td>
-                                    </tr>';
-                                }
+                                    <td>' . $row["id"] . '</td>
+                                        <td>';
+                
+                                $photoPath = $row['photo'];
+                                    if (file_exists($photoPath)) {
+                                        echo '<img src="' . $photoPath . '" width="50" height="50" alt="photo"/>';
+                                    } else {
+                                        echo 'Image not found: ' . $photoPath;
+                                        }
+                
+                                echo '</td>
+                                    <td>' . $row["name"] . '</td>
+                                    <td>' . $row["review"] . '</td>
+                                    <td>
+                                        <button class="btn btn-danger btn-sm">
+                                        <a href="' . route('delete', ['id' => $row['id']]) . '" class="text-light">Delete</a>
+                                        </button>
+                                    </td>
+                                </tr>';
+                        }
                         ?>
-                </tbody>
+                    </tbody>
                 </table>
+
                 </div>
             </div>
         </div>
