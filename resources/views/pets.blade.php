@@ -155,11 +155,6 @@
 </div>
   <!-- photos -->
    <div class="container">
-    <div class="col-12 d-flex justify-content-center">
-      <p class="filter" style="padding-left: 2%; padding-right: 2%;">All</p>
-      <p class="filter" style="padding-left: 2%; padding-right: 2%;">Cats</p>
-      <p class="filter"style="padding-left: 2%; padding-right: 2%;">Dogs</p>
-    </div>
     <div class="row">
           <div class="col-3">
             <img src="resources/cat1-haru.png" class="gallery">
