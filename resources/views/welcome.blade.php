@@ -71,7 +71,7 @@
             <li class="nav-item">
               <div class="container">
                 <div class="row">
-              <div class="col-1 p-0"><img src="resources/pin.png" class="navimg"></div>
+              <div class="col-1 p-0"><img src=" {{ asset('resources/pin.png') }}" class="navimg"></div>
               <div class="col p-0 text-nowrap"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Location</a></div>
             </div>
             </div>
@@ -136,7 +136,7 @@
       
       <!-- center photo -->
       <div class="col-12 col-md-7 d-flex order-md-1 justify-content-end p-0" >
-          <img src="resources/center.png" class="center">
+          <img src="{{ asset('resources/center.png') }}" class="center">
       </div>
   </div>
 </div>
