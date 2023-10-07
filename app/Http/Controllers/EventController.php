@@ -40,7 +40,7 @@ class EventController extends Controller
         return back()->with('flash_message', 'Review created!');
     } catch (\Exception $e) {
         \Log::error('Database error: ' . $e->getMessage());
-         return back()->withInput()->withErrors(['error' => 'Duplicate entry.']);
+         return back()->withInput()->withErrors(['error' => 'Duplicate.']);
     }
 }
 
