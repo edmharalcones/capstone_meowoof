@@ -136,7 +136,7 @@
       
       <!-- center photo -->
       <div class="col-12 col-md-7 d-flex order-md-1 justify-content-end p-0" >
-          <img src="{{ asset('public/resources/center.png') }}" class="center">
+          <img src="{{ asset('resources/center.png') }}" class="center">
       </div>
   </div>
 </div>
