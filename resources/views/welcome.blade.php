@@ -227,10 +227,10 @@
 
                             while ($row = $result->fetch_assoc()) {
                               echo '<div class="carousel-item ' . $active . '">';
-                              echo '<img src="' . $row['image'] . '" class="d-block w-100" alt="' . $row['title'] . '">';
+                              echo '<img src="' . $row['photo'] . '" class="d-block w-100" alt="' . $row['name'] . '">';
                               echo '<div class="carousel-caption d-none d-md-block">';
-                              echo '<h5>' . $row['title'] . '</h5>';
-                              echo '<p>' . $row['description'] . '</p>';
+                              echo '<h5>' . $row['name'] . '</h5>';
+                              echo '<p>' . $row['review'] . '</p>';
                               echo '</div>';
                               echo '</div>';
                             }
