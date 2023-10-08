@@ -205,153 +205,49 @@
     <br>
     <br>
     <br>
-    <div id="slider" class="carousel slide carousel-dark text-center" data-interval="false">
-      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
- 
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-          <!-- 1st slide -->
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                    src="resources/Anna.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Anna</h4>
-                  <p class="comment">
-        
-                    "I had an amazing experience adopting a dog from Meowoof. Our new dog is full of 
-                    love and brings so much happiness to our home."
-                  </p>
-                
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                    src="resources/Alex.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Alex</h4>
-                  <p class="comment">
-                
-                    "Felix has fit so wonderfully into our home. He is very sweet and give us lots of 
-                    laugh. Thank you, Meowoof."
-                  </p>
-              
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Mia.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Mia</h4>
-                  <p class="comment">
-                    "I adopted a cat that we fell in love with from Meowoof. She is a lovely and quiet girl."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- 2nd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Kate.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Kate</h4>
-                  <p class="comment">
-                 
-                    "Mango is one of the best things that has ever happened to me. Having a dog 
-                    from Meowoof is pure happiness."
+    <?php
+                            $servername = "localhost";
+                            $username = "u548574294_root";
+                            $password = "AAaa!!8520";
+                            $database = "u548574294_laravel";
+                            $connection = new mysqli($servername, $username, $password, $database);
 
-                  </p>
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Ben.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Ben</h4>
-                  <p class="comment">
-                 
-                    "Meowoof helped us find a calm and gentle dog that fits perfectly 
-                    into our lifestyle."
+                            if ($connection->connect_error) {
+                            die("Connection failed: " . $connection->connect_error);
+                            }
 
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4 d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Dan.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Dan</h4>
-                  <p class="comment">
-                   
-                    "Tiger was the first dog we saw and it was love at first sight. 
-                    He is an adorable addition to our family. Thanks, Meowoof."
-                  </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- 3rd slide -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <img class="mb-4"
-                  src="resources/Rob.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Rob</h4>
-                  <p class="comment">
-            
-                    "We adopted a senior cat from Meowoof and it was the best decision we 
-                    ever made. She brings so much warmth and comfort to our home."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Nina.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Nina</h4>
-                  <p class="comment">
-             
-                    "Thank you, Meowoof, for the wonderful experience adopting Sage. 
-                    She is the sweetest girl."
-                  </p>
-                  
-                </div>
-      
-                <div class="col-lg-4  d-lg-block">
-                  <img class="mb-4"
-                  src="resources/Maddie.png"
-                    style="width: 330px;" />
-                  <h4 class="mb-3">Maddie</h4>
-                  <p class="comment">
-                 
-                    "Batman has brought new joy to our family. Thank you, Meowoof."
+                            $sql = "SELECT * FROM reviews";
+                            $result = $connection->query($sql);
 
-                  </p>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                            if (!$result) {
+                                die("Invalid query: " . $connection->error);
+                            }
+                            echo '<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">';
+                            echo '<div class="carousel-inner">';
+
+                            while ($row = $result->fetch_assoc()) {
+                              echo '<div class="carousel-item ' . $active . '">';
+                              echo '<img src="' . $row['image'] . '" class="d-block w-100" alt="' . $row['title'] . '">';
+                              echo '<div class="carousel-caption d-none d-md-block">';
+                              echo '<h5>' . $row['title'] . '</h5>';
+                              echo '<p>' . $row['description'] . '</p>';
+                              echo '</div>';
+                              echo '</div>';
+                            }
+                              echo '</div>';
+                              echo '<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">';
+                              echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+                              echo '<span class="sr-only">Previous</span>';
+                              echo '</a>';
+                              echo '<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">';
+                              echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+                              echo '<span class="sr-only">Next</span>';
+                              echo '</a>';
+                              echo '</div>';
+                          $db = null;
+
+    ?>
+    
      
 <br>
 <br>
