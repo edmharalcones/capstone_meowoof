@@ -226,7 +226,7 @@
                             echo '<div class="carousel-inner">';
 
                             while ($row = $result->fetch_assoc()) {
-                              echo '<div class="carousel-item ' . $active . '">';
+                              echo '<div class="carousel-item ">';
                               echo '<img src="' . $row['photo'] . '" class="d-block w-100" alt="' . $row['name'] . '">';
                               echo '<div class="carousel-caption d-none d-md-block">';
                               echo '<h5>' . $row['name'] . '</h5>';
