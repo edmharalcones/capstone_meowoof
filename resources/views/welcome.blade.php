@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +71,7 @@
             <li class="nav-item">
               <div class="container">
                 <div class="row">
-              <div class="col-1 p-0"><img src=" {{ asset('resources/pin.png') }}" class="navimg"></div>
+              <div class="col-1 p-0"><img src="resources/pin.png" class="navimg"></div>
               <div class="col p-0 text-nowrap"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Location</a></div>
             </div>
             </div>
@@ -136,7 +136,7 @@
       
       <!-- center photo -->
       <div class="col-12 col-md-7 d-flex order-md-1 justify-content-end p-0" >
-          <img src="{{ asset('resources/center.png') }}" class="center">
+          <img src="resources/center.png" class="center">
       </div>
   </div>
 </div>
