@@ -114,7 +114,7 @@
 <div class="container-fluid">
 <div class="container">
 
- <form class="needs-validation"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626" method="POST" novalidate> 
+ <form class="needs-validation"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626 " method="POST" novalidate> 
      <label class="form-label" for="photo">Share a pic!</label>
           <input type="file" name="photo" accept="image/png, image/jpeg" required>
         <br>
@@ -126,7 +126,7 @@
       <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
       <div class="col" style="margin-top: 5%;">
         <button class="btn-petcare shadow-none border-0" type="submit">Send</button>
-        <input type="hidden" name="_next" value="https://edmharalcones.github.io/MEOWOOF/contact">
+        <input type="hidden" name="_next" value="https://concertspot.online/public/review">
     
       </div>
     </form>  
