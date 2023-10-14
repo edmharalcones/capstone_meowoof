@@ -179,6 +179,7 @@
 
             if (containsMultipleNumbers) {
                 alert('Please provide your Full Name, Not just numbers :).');
+                event.preventDefault(); 
             }
         }
     </script>
