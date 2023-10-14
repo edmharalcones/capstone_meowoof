@@ -114,7 +114,7 @@
 <div class="container-fluid">
 <div class="container">
 
- <form target="_self" action="https://formsubmit.co/368d7c0216414d633648d293d97328ba" enctype="multipart/form-data" method="POST"> 
+  <form target="_self" action="https://formsubmit.co/368d7c0216414d633648d293d97328ba" enctype="multipart/form-data" method="POST"> 
      <label class="form-label" for="photo">Share a pic!</label>
           <input type="file" name="photo" accept="image/png, image/jpeg" required>
         <br>
@@ -163,25 +163,26 @@
       
    
 </body>
-   <script>
-    function checkNameForNumbers() {
-        const inputFields = document.querySelectorAll('input[name]');
-        let containsMultipleNumbers = false;
+<script>
+function checkNameForNumbers() {
+    const inputFields = document.querySelectorAll('input[name="name"]');
+    let containsMultipleNumbers = false;
 
-        inputFields.forEach(input => {
-            const nameAttribute = input.getAttribute('name');
-            const numberCount = (nameAttribute.match(/\d/g) || []).length;
+    inputFields.forEach(input => {
+        const nameValue = input.value;
+        const numberCount = (nameValue.match(/\d/g) || []).length;
 
-            if (numberCount > 1) {
-                containsMultipleNumbers = true;
-            }
-        });
-
-        if (containsMultipleNumbers) {
-            alert('Please provide a valid Full Name, Not just numbers :).');
-            return false;
+        if (numberCount > 1) {
+            containsMultipleNumbers = true;
         }
-        return true;
+    });
+
+    if (containsMultipleNumbers) {
+        alert('Please provide a valid Full Name, Not just numbers :).');
+        return false;
     }
-    </script>
+
+    return true;
+}
+</script>
 </html>
