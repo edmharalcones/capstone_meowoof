@@ -172,7 +172,7 @@
     </div>
     <br>
     <div class="col-12  justify-content-end px-5 d-flex" >
-      <a href="pets.html" role="button" class="btn-pets text-nowrap">View all pets</a>
+      <a href="{{ route('pets') }}" role="button" class="btn-pets text-nowrap">View all pets</a>
     </div>
   </div>
 
@@ -183,7 +183,7 @@
   <div id="footer" class="py-5"  >
     <div class="container text-center" >
          <h2  class="headers" style="font-weight: 600;">Can't adopt? No problem! <br> You can make an impact by supporting our cause!</h2> <br>
-         <a href="donate.html" class="btn-tertiary" style=" padding: 0; margin: 0;"><img src="resources/donate.png" style=" display: flex; position: relative; right: 92px;"  width="250px" height="250px"></a>
+         <a href="{{ route('donate') }}" class="btn-tertiary" style=" padding: 0; margin: 0;"><img src="resources/donate.png" style=" display: flex; position: relative; right: 92px;"  width="250px" height="250px"></a>
        </div>
      </div>  
 
