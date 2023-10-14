@@ -118,14 +118,14 @@
      <label class="form-label" for="photo">Share a pic!</label>
           <input type="file" name="photo" accept="image/png, image/jpeg" required>
         <br>
-      <label for="name" class="form-label">Your Name:</label>
+      <label for="name" class="form-label">Your Full Name:</label>
       <input type="name" class="form-control"  name="name" required>
         <br>
       <div class="col">
       <label for="Message" class="form-label">Message:</label>
       <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
       <div class="col" style="margin-top: 5%;">
-        <button class="btn-petcare shadow-none border-0" type="submit">Send</button>
+        <button class="btn-petcare shadow-none border-0" type="submit" onclick="checkLabelForNumbers()" >Send</button>
         <input type="hidden" name="_next" value="https://concertspot.online/public/review">
     
       </div>
@@ -163,4 +163,23 @@
       
    
    </body>
+   <script>
+        function checkLabelForNumbers() {
+            const labels = document.querySelectorAll('.form-label');
+            let containsMultipleNumbers = false;
+
+            labels.forEach(label => {
+                const labelContent = label.textContent;
+                const numberCount = (labelContent.match(/\d/g) || []).length;
+
+                if (numberCount > 1) {
+                    containsMultipleNumbers = true;
+                }
+            });
+
+            if (containsMultipleNumbers) {
+                alert('Please provide your Full Name, Not just numbers :).');
+            }
+        }
+    </script>
    </html>
