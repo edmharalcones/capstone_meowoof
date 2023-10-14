@@ -114,7 +114,7 @@
 <div class="container-fluid">
 <div class="container">
 
- <form class="needs-validation"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626 " method="POST" novalidate> 
+ <form class="POST"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626 " enctype="multipart/form-data"> 
      <label class="form-label" for="photo">Share a pic!</label>
           <input type="file" name="photo" accept="image/png, image/jpeg" required>
         <br>
