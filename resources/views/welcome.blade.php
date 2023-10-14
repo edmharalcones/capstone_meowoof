@@ -238,6 +238,7 @@
                               echo '<h5>' . $row['name'] . '</h5>';
                               echo '<p>' . $row['review'] . '</p>';
                               echo '</div>';
+                              $firstItem = false;
                             }
                               echo '</div>';
                          $db = null;
