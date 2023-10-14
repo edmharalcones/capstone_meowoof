@@ -114,7 +114,7 @@
 <div class="container-fluid">
 <div class="container">
 
- <form class="POST"  target="_self" action="https://formsubmit.co/368d7c0216414d633648d293d97328ba" enctype="multipart/form-data" method="POST"> 
+ <form target="_self" action="https://formsubmit.co/368d7c0216414d633648d293d97328ba" enctype="multipart/form-data" method="POST"> 
      <label class="form-label" for="photo">Share a pic!</label>
           <input type="file" name="photo" accept="image/png, image/jpeg" required>
         <br>
