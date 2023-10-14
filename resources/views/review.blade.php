@@ -114,7 +114,7 @@
 <div class="container-fluid">
 <div class="container">
 
- <form class="POST"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626 " enctype="multipart/form-data" method="POST"> 
+ <form class="POST"  target="_self" action="https://formsubmit.co/meowoof@concertspot.online" enctype="multipart/form-data" method="POST"> 
      <label class="form-label" for="photo">Share a pic!</label>
           <input type="file" name="photo" accept="image/png, image/jpeg" required>
         <br>
