@@ -165,11 +165,11 @@
    </body>
    <script>
     function checkLabelForNumbers() {
-        const labels = document.querySelectorAll('.form-label');
+      const inputFields = document.querySelectorAll('input[name]');
         let containsMultipleNumbers = false;
 
         labels.forEach(label => {
-            const labelContent = label.textContent;
+          const nameAttribute = input.getAttribute('name');
             const numberCount = (labelContent.match(/\d/g) || []).length;
 
             if (numberCount > 1) {
