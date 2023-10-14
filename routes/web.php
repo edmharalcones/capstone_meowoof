@@ -45,7 +45,7 @@ Route::get('/petcare', function () {
 
 Route::get('/pets', function () {
     return view('pets');
-});
+})->name('pets');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
