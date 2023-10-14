@@ -125,7 +125,7 @@
       <label for="Message" class="form-label">Message:</label>
       <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
       <div class="col" style="margin-top: 5%;">
-        <button class="btn-petcare shadow-none border-0" type="submit" onclick="checkLabelForNumbers()" >Send</button>
+      <button class="btn-petcare shadow-none border-0" type="submit" onclick="return checkLabelForNumbers();">Send</button>
         <input type="hidden" name="_next" value="https://concertspot.online/public/review">
     
       </div>
@@ -164,23 +164,24 @@
    
    </body>
    <script>
-        function checkLabelForNumbers() {
-            const labels = document.querySelectorAll('.form-label');
-            let containsMultipleNumbers = false;
+    function checkLabelForNumbers() {
+        const labels = document.querySelectorAll('.form-label');
+        let containsMultipleNumbers = false;
 
-            labels.forEach(label => {
-                const labelContent = label.textContent;
-                const numberCount = (labelContent.match(/\d/g) || []).length;
+        labels.forEach(label => {
+            const labelContent = label.textContent;
+            const numberCount = (labelContent.match(/\d/g) || []).length;
 
-                if (numberCount > 1) {
-                    containsMultipleNumbers = true;
-                }
-            });
-
-            if (containsMultipleNumbers) {
-                alert('Please provide your Full Name, Not just numbers :).');
-                event.preventDefault(); 
+            if (numberCount > 1) {
+                containsMultipleNumbers = true;
             }
+        });
+
+        if (containsMultipleNumbers) {
+            alert('Please provide your Full Name, Not just numbers :).');
+            return false;
         }
-    </script>
+        return true;
+    }
+</script>
    </html>
