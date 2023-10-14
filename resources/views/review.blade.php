@@ -162,15 +162,15 @@
       </footer>
       
    
-   </body>
+</body>
    <script>
-    function checkLabelForNumbers() {
-      const inputFields = document.querySelectorAll('input[name]');
+    function checkNameForNumbers() {
+        const inputFields = document.querySelectorAll('input[name]');
         let containsMultipleNumbers = false;
 
-        labels.forEach(label => {
-          const nameAttribute = input.getAttribute('name');
-            const numberCount = (labelContent.match(/\d/g) || []).length;
+        inputFields.forEach(input => {
+            const nameAttribute = input.getAttribute('name');
+            const numberCount = (nameAttribute.match(/\d/g) || []).length;
 
             if (numberCount > 1) {
                 containsMultipleNumbers = true;
@@ -178,10 +178,10 @@
         });
 
         if (containsMultipleNumbers) {
-            alert('Please provide your Full Name, Not just numbers :).');
+            alert('Please provide a valid Full Name, Not just numbers :).');
             return false;
         }
         return true;
     }
-</script>
-   </html>
+    </script>
+</html>
