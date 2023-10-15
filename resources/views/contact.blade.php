@@ -104,7 +104,7 @@
 <div class="container-fluid">
 <div class="container">
 
- <form class="needs-validation"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626" method="POST" novalidate> 
+ <form target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626" method="POST"> 
         <label for="name" class="form-label " >Full Name:</label> <br>
         <input type="text" class="form-control" name="name" required>
         <br>
