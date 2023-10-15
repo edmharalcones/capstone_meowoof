@@ -164,6 +164,7 @@
    
 </body>
 <script>
+// function for name checker
 function checkNameForNumbers() {
     const inputFields = document.querySelectorAll('input[name="name"]');
     let containsMultipleNumbers = false;

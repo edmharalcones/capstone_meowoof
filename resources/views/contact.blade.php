@@ -106,7 +106,7 @@
 
  <form class="needs-validation"  target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626" method="POST" novalidate> 
         <label for="name" class="form-label " >Full Name:</label> <br>
-        <input type="text" class="form-control" name="name"   pattern="[a-zA-Z\s]*" required>
+        <input type="text" class="form-control" name="name" required>
         <br>
         <label for="email" class="form-label">Email Address:</label>
         <input type="email" class="form-control"  name="email" required>
@@ -132,7 +132,7 @@
           <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
 
       <div class="col" style="margin-top: 5%;">
-        <button class="btn-petcare shadow-none border-0" type="submit">Send</button>
+        <button class="btn-petcare shadow-none border-0" type="submit" onclick="checkNameForNumbers();">Send</button>
         <input type="hidden" name="_next" value="https://concertspot.online/public/contact">
     
       </div>
@@ -170,4 +170,28 @@
 
 
 </body>
+<script>
+// function for name checker
+function checkNameForNumbers() {
+    const inputFields = document.querySelectorAll('input[name="name"]');
+    let containsMultipleNumbers = false;
+
+    inputFields.forEach(input => {
+        const nameValue = input.value;
+        const numberCount = (nameValue.match(/\d/g) || []).length;
+
+        if (numberCount > 1) {
+            containsMultipleNumbers = true;
+        }
+    });
+
+    if (containsMultipleNumbers) {
+        alert('Please provide a valid Full Name, Not just numbers :).');
+        return false;
+    }
+
+    return true;
+}
+</script>
+
 </html>
