@@ -176,11 +176,11 @@
                             echo '<div class="row">';
                             while ($row = $result->fetch_assoc()) {
                               echo '<div class="col-3">';
-                              echo '<a href="'. $row['link'] .'">';
                               echo '<img src="' . $row['pet'] . '" class="gallery">';
-                              echo '</a>';
                               echo '<div>';
+                              echo '<a href="'. $row['link'] .'">';
                               echo '<img src="' . $row['cover'] . '"  class="cover">';
+                              echo '</a>';
                               echo '</div>';
                               echo '</div>';
                             }
