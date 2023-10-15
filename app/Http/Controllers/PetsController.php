@@ -20,6 +20,8 @@ class PetsController extends Controller
         try {
     
             $event = Pets::create([
+                'pet' => $request->pet,
+                'cover' => $request->cover,
                 'link' => $request->link,
             ]);
     
