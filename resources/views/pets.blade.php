@@ -175,17 +175,16 @@
                             echo '<div class="container">';
                             echo '<div class="row">';
                             while ($row = $result->fetch_assoc()) {
-                              echo '<div class="col-3">';
                               echo '<a href="'. $row['link'] .'">';
+                              echo '<div class="col-3">';
+                              
                               echo '<img src="' . $row['pet'] . '" class="gallery">';
-                              echo '</a>';
+                              
                               echo '<div>';
                               echo '<img src="' . $row['cover'] . '"  class="cover">';
-                              
                               echo '</div>';
-                              echo '<a href="'. $row['link'] .'"> View more photos';
+                              echo '</div>';
                               echo '</a>';
-                              echo '</div>';
                             }
                               echo '</div>'; 
                               echo '<br>';
