@@ -83,27 +83,28 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
-                        {{ __("Add a Review") }}
+                        {{ __("Add a Pet") }}
                         
                     <br>
                     <br>
                     <br>
-                        <form action="{{ route('dashboard.post') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('adoption.post') }}" method="POST" enctype="multipart/form-data">
                                    {!! csrf_field() !!}
-                            <label class="form-label" for="photo">Upload Photo:</label>
+                            <label class="form-label" for="pet">Upload Photo:</label>
                             <div class="input-group mb-3">
-                                    <input type="file" class="form-control" id="photo" name="photo" required/>
+                                    <input type="file" class="form-control" id="pet" name="pet" required/>
                             </div>
                                 <br>
     
+                                <label class="form-label" for="cover">Upload Cover:</label>
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="name">Name</span>
-                                    <input type="text" class="form-control" placeholder="Name" name="name" id="name"required/>
+                                    <input type="file" class="form-control" id="cover" name="cover" required/>
                             </div>
                                 <br>
                             
+                            
                             <div class="input-group mb-3">
-                                    <textarea type="text" class="form-control" rows="3" placeholder="Review" name="review" id="review"required></textarea>
+                                    <textarea type="text" class="form-control" rows="3" placeholder="Provide album link" name="link" id="link"required></textarea>
                             </div>
                                 <br>
                                 <div class="container px-4">
