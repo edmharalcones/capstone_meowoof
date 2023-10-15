@@ -176,7 +176,7 @@
                             echo '<div class="row">';
                             while ($row = $result->fetch_assoc()) {
                               echo '<div class="col-3">';
-                              echo '<a href="'. $row['link'] .'"> target=_blank';
+                              echo '<a href="'. $row['link'] .'" target=_blank'> ;
                               echo '<img src="' . $row['pet'] . '" class="gallery">';
                               echo '<div>';
                               echo '<img src="' . $row['cover'] . '"  class="cover">';
