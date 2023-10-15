@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Reviews') }}
+            {{ __('Adoption') }}
         </h2>
     </x-slot>
 
@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    {{ __("Reviews") }}
+                    {{ __("Pets") }}
 
                 </div>
                 <div class="table-responsive">
@@ -18,8 +18,8 @@
                         <tr>
                             <th>Id</th>
                             <th>Photo</th>
-                            <th>Name</th>
-                            <th>Review</th>
+                            <th>Cover</th>
+                            <th>Link</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,7 +34,7 @@
                             die("Connection failed: " . $connection->connect_error);
                             }
 
-                            $sql = "SELECT * FROM reviews";
+                            $sql = "SELECT * FROM pets";
                             $result = $connection->query($sql);
 
                             if (!$result) {
@@ -46,16 +46,24 @@
                                     <td>' . $row["id"] . '</td>
                                         <td>';
                 
-                                $photoPath = $row['photo'];
-                                    if (file_exists($photoPath)) {
-                                        echo '<img src="' . $photoPath . '" width="50" height="50" alt="photo"/>';
+                                $petPath = $row['pet'];
+                                    if (file_exists($petPath)) {
+                                        echo '<img src="' . $petPath . '" width="50" height="50" alt="photo"/>';
                                     } else {
-                                        echo 'Image not found: ' . $photoPath;
+                                        echo 'Image not found: ' . $petPath;
                                         }
-                
-                                echo '</td>
-                                    <td>' . $row["name"] . '</td>
-                                    <td>' . $row["review"] . '</td>
+                                
+                                echo '</td>';
+                                echo'<td>';
+                                $coverPath = $row['cover'];
+                                if (file_exists($coverPath)) {
+                                    echo '<img src="' . $coverPath . '" width="50" height="50" alt="photo"/>';
+                                } else {
+                                    echo 'Image not found: ' . $coverPath;
+                                    }
+                                echo '</td>';
+                                
+                                echo '<td>' . $row["link"] . '</td>
                                     <td>
                                         <button class="btn btn-danger btn-sm">
                                         <a href="' . route('delete', ['id' => $row['id']]) . '" class="text-light">Delete</a>
