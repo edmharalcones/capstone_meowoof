@@ -5,7 +5,7 @@
 
 <h3>Back End</h3>
 
-<img src="public/resources/frontend.png" />
+<img src="public/resources/backend.png" />
 
 <h3>Database Tables</h3>
 
