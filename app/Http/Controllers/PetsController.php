@@ -12,7 +12,7 @@ class PetsController extends Controller
     
     public function delete($id)
     {
-    DB::table('reviews')->where('id', $id)->delete();
+    DB::table('pets')->where('id', $id)->delete();
     return redirect()->back();
     }
     public function store(Request $request)
