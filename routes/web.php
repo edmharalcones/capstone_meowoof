@@ -51,6 +51,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+Route::get('/adoption', function () {
+    return view('adoption');
+})->middleware(['auth', 'verified'])->name('adoption');
+
 Route::get('/delete/{id}', [EventController::class, 'delete'])->name('delete');
 
 Route::middleware('auth')->group(function () {
@@ -58,6 +63,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('/dashboard', [EventController::class, 'store'])->name('dashboard.post');
+    Route::post('/adoption', [PetController::class, 'store'])->name('adoption.post');
 });
 
 require __DIR__.'/auth.php';
