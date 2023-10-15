@@ -181,9 +181,10 @@
                               echo '</a>';
                               echo '<div>';
                               echo '<img src="' . $row['cover'] . '"  class="cover">';
+                              
+                              echo '</div>';
                               echo '<a href="'. $row['link'] .'"> View more photos';
                               echo '</a>';
-                              echo '</div>';
                               echo '</div>';
                             }
                               echo '</div>'; 
