@@ -154,116 +154,53 @@
 </div>
 </div>
   <!-- photos -->
-   <div class="container">
-    <div class="row">
-          <div class="col-3">
-            <img src="resources/cat1-haru.png" class="gallery">
-            <div>
-              <img src="resources/Haru.png"  class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/cat2-dot.png" class="gallery">
-            <div>
-              <img src="resources/Dot.png"  class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/cat3-boots.png" class="gallery">
-            <div>
-              <img src="resources/Boots.png" class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/cat4-lunch.png" class="gallery">
-            <div>
-              <img src="resources/Lunch.png"  class="cover">
-              
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/cat5-noa.png" class="gallery">
-            <div>
-              <img src="resources/Noa.png"  class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/cat6-joji.png" class="gallery">
-            <div>
-              <img src="resources/Joji.png"  class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/cat7-ichi.png" class="gallery">
-            <div>
-              <img src="resources/Ichi.png" class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/cat8-dash.png" class="gallery">
-            <div>
-              <img src="resources/Dash.png"  class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog1-duke.png" class="gallery">
-            <div>
-              <img src="resources/Duke.png" class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog2-rocky.png" class="gallery">
-            <div>
-              <img src="resources/Rocky.png" class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog3-mylo.png" class="gallery">
-            <div>
-              <img src="resources/Mylo.png" class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog4-lucy.png" class="gallery">
-            <div>
-              <img src="resources/Lucy.png"  class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog5-nori.png" class="gallery">
-            <div>
-              <img src="resources/Nori.png" class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog6-max.png" class="gallery">
-            <div>
-              <img src="resources/Max.png"  class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog7-charlie.png" class="gallery">
-            <div>
-              <img src="resources/Charlie.png" class="cover">
-            </div>
-          </div>
-          <div class="col-3">
-            <img src="resources/dog8-peri.png" class="gallery">
-            <div>
-              <img src="resources/Peri.png"  class="cover">
-            </div>
-          </div>
+                         <?php
+                            $servername = "localhost";
+                            $username = "u548574294_root";
+                            $password = "AAaa!!8520";
+                            $database = "u548574294_laravel";
+                            $connection = new mysqli($servername, $username, $password, $database);
 
-       </div> <br> <br> <br> <br> <br>
+                            if ($connection->connect_error) {
+                            die("Connection failed: " . $connection->connect_error);
+                            }
+
+                      
+                            $sql = "SELECT * FROM pets";
+                            $result = $connection->query($sql);
+
+                            if (!$result) {
+                                die("Invalid query: " . $connection->error);
+                            }
+                            echo '<div class="container">';
+                            echo '<div class="row">';
+                            while ($row = $result->fetch_assoc()) {
+                              echo '<div class="col-3">';
+                              echo '<img src="resources/cat1-haru.png" class="gallery">';
+                              echo '<div>';
+                              echo '<img src="resources/Haru.png"  class="cover">';
+                              echo '</div>';
+                              echo '</div>';
+                            }
+                              echo '</div>'; 
+                              echo '<br>';
+                              echo '<br>';
+                              echo '<br>';
+                              echo '<br>';
+                              echo '<br>';
+                              echo '</div>';
+                            
+                         $db = null;
+
+                      ?>
+          
+  <div class=" col jumbotron jumbotron-fluid text-center">
+      <div class="container ps-auto">
+          <h5 class="display-5 headers" style="text-align: center;">How it works?</h5> <br> 
       </div>
-      <div class=" col jumbotron jumbotron-fluid text-center">
-            <div class="container ps-auto">
-      <h5 class="display-5 headers" style="text-align: center;">How it works?</h5> <br> 
-    </div>
   </div>
       <img src="resources/adoption.png"  class="steps">
       <br>
-     
       <br>
     
 <!-- Footer -->
