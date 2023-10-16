@@ -168,7 +168,6 @@
          <a href="{{ route('donate') }}" class="btn-tertiary" style=" padding: 0; margin: 0;"><img src="resources/donate.png" style=" display: flex; position: relative; right: 92px;"  width="250px" height="250px"></a>
        </div>
      </div>  
-
     <!-- Testimonials -->
     <br>
     <br>
