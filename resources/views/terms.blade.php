@@ -119,11 +119,11 @@ AGREEMENT TO OUR LEGAL TERMS
 <br>
 We are Meowoof! ("Company," "we," "us," "our"), a company registered in the Philippines at 1 Kalayaan St., Binakayan-Kanluran, Kawit, Cavite, Philippines, 4104.
 
-We operate the website<a href="https://edmharalcones.github.io/MP1/"> https://edmharalcones.github.io/MP1/</a> (the "Site"),
+We operate the website<a href="https://concertspot.online/public/"> https://concertspot.online/public/</a> (the "Site"),
  as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
  <br>
 <br>
-You can contact us by phone at 046-111-1111, email at<a href="mailto:edmharalcones@gmail.com"> edmharalcones@gmail.com </a>, or by mail to 1 Kalayaan St., Binakayan-Kanluran, Kawit, Cavite, Philippines, 4104.
+You can contact us by phone at 046-111-1111, email at<a href="mailto:meowoof@concertspot.online"> meowoof@concertspot.online </a>, or by mail to 1 Kalayaan St., Binakayan-Kanluran, Kawit, Cavite, Philippines, 4104.
 
 These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Meowoof!, concerning 
 your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal 
@@ -472,7 +472,7 @@ Phone:
 <br>
 Email:
 <br>
-<a href="mailto:edmharalcones@gmail.com">edmharalcones@gmail.com</a>
+<a href="mailto:meowoof@concertspot.online">meowoof@concertspot.online</a>
 
 </p>
 
@@ -494,7 +494,7 @@ Email:
         <a href="https://www.youtube.com//" target="_blank"><img src="resources/yt.png" class="socials"></a>
       </div>
       <div class="col-12 col-md-4 order-2 order-md-2 d-flex justify-content-center">
-        <a href="terms.html" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
+        <a href="{{ route('terms') }}" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
       </div>
     </div>
   </div>

@@ -174,7 +174,7 @@
         <a href="https://www.youtube.com//" target="_blank"><img src="resources/yt.png" class="socials"></a>
       </div>
       <div class="col-12 col-md-4 order-2 order-md-2 d-flex justify-content-center">
-        <a href="terms.html" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
+        <a href="{{ route('terms') }}" class="link px-2 text-nowrap" style="font-size: 10px;">Terms of Use</a>
       </div>
     </div>
   </div>
