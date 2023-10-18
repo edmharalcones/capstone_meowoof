@@ -9,15 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="resources/icon.png">
     <style>
-   
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
-      }
-      
+      }  
     </style>
-
     <title>Meowoof!</title>
 </head>
 <body>
@@ -28,11 +25,11 @@
       <div class="navbar-brands" >
         <a class="nav-link" href="{{ route('welcome') }}" ><img src="resources/logo.png" class="logo"></a>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"  style="margin-right: 40px;">
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"  style="margin-right: 40px;">
           <ul class="navbar-nav" style="display:flex; justify-content:end;">
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('pets') }}">Pets</a>
@@ -51,18 +48,18 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('faq') }}" >FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('contact') }}" >Contact</a>
-          </li>
-            <li class="nav-item">
-              <div class="container">
-                <div class="row">
-              <div class="col-1 p-0"><img src="resources/pin.png" class="navimg"></div>
-              <div class="col p-0 text-nowrap"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Location</a></div>
-            </div>
-            </div>
-          </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('contact') }}" >Contact</a>
+              </li>
+              <li class="nav-item">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-1 p-0"><img src="resources/pin.png" class="navimg"></div>
+                    <div class="col p-0 text-nowrap"> <a class="nav-link" data-bs-toggle="modal" data-bs-target="#mymodal">Location</a></div>
+                  </div>
+                </div>
+              </li>
           </ul>
       </div>
   </div>
@@ -74,33 +71,26 @@
         <div class="modal-content">
             <!-- Modal header -->
             <div class="modal-header">
-              <button typ="button" class="btn btn-danger btn-close" data-bs-dismiss="modal"></button>  
-                
+              <button typ="button" class="btn btn-danger btn-close" data-bs-dismiss="modal"></button>    
             </div>
             <!-- Modal Body -->
             <div class="modal-body">
-              <!-- Google map -->
-            <div class="row">
-           <div class="d-flex justify-content-center" style="margin-bottom: 100px;">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.8297235176572!2d120.91463153770376!3d14.
-          446779252897281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d2a23f40d999%3A0xa1fd6aa5ac99573d!2sBinakayan%
-          0-%20Kanluran%2C%20Kawit%2C%204104%20Cavite!5e0!3m2!1sen!2sph!4v1684539420101!5m2!1sen!2sph" width="600" height="450" style="border:0;" 
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-           </div>
-
-</div>
-            </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                
+            <!-- Google map -->
+              <div class="row">
+                <div class="d-flex justify-content-center" style="margin-bottom: 100px;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.8297235176572!2d120.91463153770376!3d14.
+                    446779252897281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d2a23f40d999%3A0xa1fd6aa5ac99573d!2sBinakayan%
+                    0-%20Kanluran%2C%20Kawit%2C%204104%20Cavite!5e0!3m2!1sen!2sph!4v1684539420101!5m2!1sen!2sph" width="600" height="450" style="border:0;" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
             </div>
         </div>
     </div>
 </div> 
 
 <br>
-<!-- Form -->
+<!-- Donation -->
 
 <div class="container">
     <div class=" col jumbotron jumbotron-fluid">
