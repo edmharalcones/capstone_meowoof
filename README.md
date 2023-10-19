@@ -9,7 +9,7 @@
 
 <h3>Database Tables</h3>
 
-<img src="Tables_Screenshot.png" />
+<img src="tables.png" />
 
 
 
