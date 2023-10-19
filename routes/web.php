@@ -61,7 +61,10 @@ Route::get('/adoption', function () {
     return view('adoption');
 })->middleware(['auth', 'verified'])->name('adoption');
 
-Route::get('/delete/{id}', [EventController::class, 'delete'])->name('delete');
+Route::get('/edit/{id}', [EventController::class, 'edit'])->name('dashboard.edit');
+Route::get('/edit/{id}', [PetsController::class, 'edit'])->name('adoption.edit');
+Route::get('/delete/{id}', [EventController::class, 'delete'])->name('dashboard.delete');
+Route::get('/delete/{id}', [PetsController::class, 'delete'])->name('adoption.delete');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

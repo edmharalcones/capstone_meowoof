@@ -16,6 +16,17 @@ class EventController extends Controller
     return redirect()->back();
     }
 
+    public function edit($id)
+{
+    $item = Review::find($id);
+
+    if (!$item) {
+        return redirect()->back()->with('error', 'Item not found');
+    }
+
+    return back();
+}
+
     public function store(Request $request)
 {
     try {
@@ -37,7 +48,7 @@ class EventController extends Controller
         }
 
        
-        return back()->with('flash_message', 'Review created!');
+        return back();
     } catch (\Exception $e) {
         \Log::error('Database error: ' . $e->getMessage());
          return back()->withInput()->withErrors(['error' => 'Duplicate.']);
