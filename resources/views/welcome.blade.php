@@ -26,8 +26,8 @@
     </head>
 <body>
 <!-- Navigation bar -->
-@include('navbar')
-@include('modal') 
+@include('components.navbar')
+@include('components.map') 
 <br>
 <!-- Quote -->
 <div class="container-fluid">
@@ -172,6 +172,6 @@
 <br>
 
 <!-- Footer -->
-@include('footer') 
+@include('components.footer') 
 </body>
 </html>
