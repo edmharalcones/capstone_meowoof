@@ -26,7 +26,7 @@
                   <a class="nav-link" href="{{ route('about') }}">About the Shelter</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('faq') }}" >FAQ</a>
+                <a class="nav-link" href="{{ route('faq') }}" >FAQa</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('contact') }}" >Contact</a>
