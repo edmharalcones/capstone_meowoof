@@ -56,14 +56,10 @@
                                 echo '</td>
                                     <td>' . $row["name"] . '</td>
                                     <td>' . $row["review"] . '</td>
-                                    <td>
-                                        <button class="btn btn-warning btn-sm">
-                                        <a href="' . route('dashboard.edit', ['id' => $row['id']]) . '" class="text-light">Delete</a>
-                                        </button>
-                                    </td>
+                                    
                                     <td>
                                         <button class="btn btn-danger btn-sm">
-                                        <a href="' . route('dashboard.delete', ['id' => $row['id']]) . '" class="text-light">Delete</a>
+                                        <a href="' . route('delete', ['id' => $row['id']]) . '" class="text-light">Delete</a>
                                         </button>
                                     </td>
                                 </tr>';
@@ -85,22 +81,22 @@
                     <br>
                     <br>
                     <br>
-                        <form  method="POST" enctype="multipart/form-data" action="{{ isset($item) ? route('dashboard.edit', $item->id) : route('dashboard.post') }}">
+                        <form action="{{ route('dashboard.post') }}" method="POST" enctype="multipart/form-data">
                                    {!! csrf_field() !!}
                             <label class="form-label" for="photo">Upload Photo:</label>
                             <div class="input-group mb-3">
-                                    <input type="file" class="form-control" id="photo" name="photo" value="{{ isset($item) ? $item->photo : '' }}" required/>
+                                    <input type="file" class="form-control" id="photo" name="photo" required/>
                             </div>
                                 <br>
     
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="name">Name</span>
-                                    <input type="text" class="form-control" placeholder="Name" name="name" id="name" value="{{ isset($item) ? $item->name : '' }}"required/>
+                                    <input type="text" class="form-control" placeholder="Name" name="name" id="name"required/>
                             </div>
                                 <br>
                             
                             <div class="input-group mb-3">
-                                    <textarea type="text" class="form-control" rows="3" placeholder="Review" name="review" id="review" value="{{ isset($item) ? $item->review : '' }}"required></textarea>
+                                    <textarea type="text" class="form-control" rows="3" placeholder="Review" name="review" id="review"required></textarea>
                             </div>
                                 <br>
                                 <div class="container px-4">

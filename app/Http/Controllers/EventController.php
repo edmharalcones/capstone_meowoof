@@ -16,17 +16,6 @@ class EventController extends Controller
     return redirect()->back();
     }
 
-    public function edit($id)
-{
-    $item = Review::find($id);
-
-    if (!$item) {
-        return redirect()->back()->with('error', 'Item not found');
-    }
-
-    return back();
-}
-
     public function store(Request $request)
 {
     try {
