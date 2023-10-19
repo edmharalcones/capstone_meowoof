@@ -24,7 +24,7 @@
         <br>
     </div>
 </div>
-<div class="container " style="margin: 40px;">
+<div class="container " style="margin-bottom: 400px;">
     <div class="accordion accordion-flush custom-accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
