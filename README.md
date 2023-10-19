@@ -9,7 +9,7 @@
 
 <h3>Database Tables</h3>
 
-<img src="tables.png" />
+<img src="public/resources/tables.png" />
 
 
 
