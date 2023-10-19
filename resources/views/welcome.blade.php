@@ -172,6 +172,6 @@
 <br>
 
 <!-- Footer -->
-@include('modal') 
+@include('footer') 
 </body>
 </html>
