@@ -42,7 +42,7 @@
             const savedPassword = localStorage.getItem('password');
             if (savedUsername) {
                 usernameInput.value = savedUsername;
-                passwordInput.value = savedUsername;
+                passwordInput.value = savedPassword;
             }
         }
         document.getElementById('loginButton').addEventListener('click', function () {
