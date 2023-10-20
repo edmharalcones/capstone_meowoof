@@ -36,7 +36,7 @@
         const usernameInput = document.getElementById('email');
         const passwordInput = document.getElementById('password');
 
-        if (localStorage.getItem('remember_me') === 'true') {
+        if (localStorage.getItem('rememberMe') === 'true') {
             rememberMeCheckbox.checked = true;
             const savedUsername = localStorage.getItem('email');
             if (savedUsername) {
