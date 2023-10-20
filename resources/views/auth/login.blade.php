@@ -26,9 +26,33 @@
             </label>
         </div>
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button class="ml-3">
+            <x-primary-button class="ml-3" id="loginButton">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
     </form>
+    <script>
+        const rememberMeCheckbox = document.getElementById('remember_me');
+        const usernameInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+
+        if (localStorage.getItem('remember_me') === 'true') {
+            rememberMeCheckbox.checked = true;
+            const savedUsername = localStorage.getItem('email');
+            if (savedUsername) {
+                usernameInput.value = savedUsername;
+            }
+        }
+        document.getElementById('loginButton').addEventListener('click', function () {
+
+            if (rememberMeCheckbox.checked) {
+                localStorage.setItem('rememberMe', 'true');
+                localStorage.setItem('username', usernameInput.value);
+            } else {
+                localStorage.removeItem('rememberMe');
+                localStorage.removeItem('username');
+            }
+
+        });
+    </script>
 </x-guest-layout>
