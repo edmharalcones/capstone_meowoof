@@ -38,9 +38,11 @@
 
         if (localStorage.getItem('rememberMe') === 'true') {
             rememberMeCheckbox.checked = true;
-            const savedUsername = localStorage.getItem('email');
+            const savedUsername = localStorage.getItem('username');
+            const savedPassword = localStorage.getItem('password');
             if (savedUsername) {
                 usernameInput.value = savedUsername;
+                passwordInput.value = savedUsername;
             }
         }
         document.getElementById('loginButton').addEventListener('click', function () {
@@ -48,9 +50,11 @@
             if (rememberMeCheckbox.checked) {
                 localStorage.setItem('rememberMe', 'true');
                 localStorage.setItem('username', usernameInput.value);
+                localStorage.setItem('password', passwordInput.value);
             } else {
                 localStorage.removeItem('rememberMe');
                 localStorage.removeItem('username');
+                localStorage.removeItem('password');
             }
 
         });
