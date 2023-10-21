@@ -31,7 +31,7 @@
 <!-- Navigation bar -->
 @include('components.navbar')
 @include('components.map') 
-<br>
+<br/>
 <!-- our ate and kuya -->
 
   
@@ -42,27 +42,27 @@
     </div>
     <div class="col-12 col-md-7 d-flex order-md-1">
       <p class="abouttext">
-        <br>
-        <br>
+      <br/>
+      <br/>
       
         Welcome to the heartwarming story of Rose and Archie, 
         an extraordinary couple whose compassion knows no bounds.
-        <br><br>
+        <br/><br/>
         Together, they created Meowoof, a haven for abandoned cats 
          and dogs—a place where second chances and new beginnings take flight.
         With unwavering determination, Rose and Archie transformed their 
         humble abode into an adoption shelter, a sanctuary where hope found 
         its wings.
-        <br><br>
+        <br/><br/>
         Their mission is to provide these innocent creatures with 
         a safe and nurturing environment where they can heal and thrive until
          they find their forever families. They strive to ensure that every animal
           feels secure, comfortable, and truly cherished throughout their stay at Meowoof.
-        <br><br>
+        <br/><br/>
         Now, as their legacy endures, Rose and Archie invite you to join their extraordinary 
         journey. Explore, learn, and join them as they create a better world—for all creatures, 
         great and small.
-        <br><br>
+        <br/><br/>
         Together, we can make a lasting impact and build a future where 
         love knows no boundaries.
       </p>
@@ -70,12 +70,12 @@
     
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <!-- Footer -->
 @include('components.footer') 

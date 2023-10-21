@@ -78,27 +78,27 @@
                     <div class="p-6 text-gray-900">
                         {{ __("Add a Review") }}
                         
-                    <br>
-                    <br>
-                    <br>
+                        <br/>
+                        <br/>
+                        <br/>
                         <form action="{{ route('dashboard.post') }}" method="POST" enctype="multipart/form-data">
                                    {!! csrf_field() !!}
                             <label class="form-label" for="photo">Upload Photo:</label>
                             <div class="input-group mb-3">
                                     <input type="file" class="form-control" id="photo" name="photo" required/>
                             </div>
-                                <br>
+                            <br/>
     
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="name">Name</span>
                                     <input type="text" class="form-control" placeholder="Name" name="name" id="name"required/>
                             </div>
-                                <br>
+                            <br/>
                             
                             <div class="input-group mb-3">
                                     <textarea type="text" class="form-control" rows="3" placeholder="Review" name="review" id="review"required></textarea>
                             </div>
-                                <br>
+                            <br/>
                                 <div class="container px-4">
                                     <div class="flex justify-start mt-4">
                                         <x-primary-button>
@@ -106,7 +106,7 @@
                                         </x-primary-button>
                                     </div>
                                 </div>
-                                <br>
+                                <br/>
                              
                         </form>
         </div>

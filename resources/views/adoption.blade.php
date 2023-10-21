@@ -85,28 +85,28 @@
                     <div class="p-6 text-gray-900">
                         {{ __("Add a Pet") }}
                         
-                    <br>
-                    <br>
-                    <br>
+                        <br/>
+                        <br/>
+                        <br/>
                         <form action="{{ route('adoption.post') }}" method="POST" enctype="multipart/form-data">
                                    {!! csrf_field() !!}
                             <label class="form-label" for="pet">Upload Photo:</label>
                             <div class="input-group mb-3">
                                     <input type="file" class="form-control" id="pet" name="pet" required/>
                             </div>
-                                <br>
+                            <br/>
     
                                 <label class="form-label" for="cover">Upload Cover:</label>
                             <div class="input-group mb-3">
                                     <input type="file" class="form-control" id="cover" name="cover" required/>
                             </div>
-                                <br>
+                            <br/>
                             
                             
                             <div class="input-group mb-3">
                                     <textarea type="text" class="form-control" rows="3" placeholder="Provide album link" name="link" id="link"required></textarea>
                             </div>
-                                <br>
+                            <br/>
                                 <div class="container px-4">
                                     <div class="flex justify-start mt-4">
                                         <x-primary-button>
@@ -114,7 +114,7 @@
                                         </x-primary-button>
                                     </div>
                                 </div>
-                                <br>
+                                <br/>
                              
                         </form>
         </div>

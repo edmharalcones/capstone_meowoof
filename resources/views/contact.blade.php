@@ -22,20 +22,20 @@
 
 @include('components.navbar')
 @include('components.map')
-<br>
+<br/>
 <!-- Contact -->
 <div class="container-fluid">
   <div class="container">
     <form target="_self" action="https://formsubmit.co/18969b8e10734503ba87448aca094626" method="POST"> 
         <label for="name" class="form-label " >Full Name:</label> <br>
         <input type="text" class="form-control" name="name" required>
-        <br>
+        <br/>
         <label for="email" class="form-label">Email Address:</label>
         <input type="email" class="form-control"  name="email" required>
-         <br>
+        <br/>
         <label for="validationPhone" class="form-label" >Phone Number:</label>
           <input type="number" class="form-control" id="validationPhone" required>     
-      <br>
+        <br/>
       <div class="col">
         <p>Subject:</p>
         <select class="form-select" name="subject">
@@ -55,11 +55,11 @@
       </form>  
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <!-- Footer -->
 @include('components.footer')
 </body>
