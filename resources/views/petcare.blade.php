@@ -30,7 +30,7 @@
 @include('components.navbar')
 @include('components.map')
  
-<br>
+<br/>
 <!-- Pet Care -->
 
 <div class="container ">
@@ -127,11 +127,11 @@
 
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
       <!-- Footer -->
       @include('components.footer')

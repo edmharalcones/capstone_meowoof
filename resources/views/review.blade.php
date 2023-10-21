@@ -22,13 +22,13 @@
 @include('components.navbar')
 @include('components.map')
  
-<br>
+<br/>
 <!-- Review -->
 <div class="col jumbotron jumbotron-fluid text-center">
     <div class="container ps-auto">
         <h5 class="display-5 headers" style="text-align: center;">Share Your Adoption Journey</h5>
         <h6  style="text-align: center;">Tell Us How We Helped! Leave a Review Today and Share Your Experience.</h6>
-        <br>
+        <br/>
     </div>
 </div>
 
@@ -39,10 +39,10 @@
   <form target="_self" action="https://formsubmit.co/368d7c0216414d633648d293d97328ba" enctype="multipart/form-data" method="POST"> 
      <label class="form-label" for="photo">Share a pic!</label>
           <input type="file" name="photo" accept="image/png, image/jpeg" required>
-        <br>
+          <br/>
       <label for="name" class="form-label">Your Full Name:</label>
       <input type="text" class="form-control"  name="name" required>
-        <br>
+          <br/>
       <div class="col">
       <label for="Message" class="form-label">Message:</label>
       <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
@@ -54,11 +54,11 @@
     </form>  
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
       <!-- Footer -->
       @include('components.footer')

@@ -15,13 +15,13 @@
 @include('components.navbar')
 @include('components.map')
 
-<br>
+<br/>
 <!-- FAQ -->
-<br>
+<br/>
 <div class="col jumbotron jumbotron-fluid text-center">
     <div class="container ps-auto">
         <h5 class="display-5 headers" style="text-align: center;">Frequently Asked Questions</h5>
-        <br>
+        <br/>
     </div>
 </div>
 <div class="container " style="margin-bottom: 100px;">

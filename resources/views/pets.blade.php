@@ -65,13 +65,13 @@
 @include('components.navbar')
 @include('components.map')
 
-<br>
+<br/>
 <!-- Header note -->
-<br>
+<br/>
 <div class=" col jumbotron jumbotron-fluid text-center">
   <div class="container ps-auto">
 <h5 class="display-5 headers" style="text-align: center;">Take us home.</h5>
-<br>
+<br/>
 
 </div>
 </div>
@@ -108,11 +108,11 @@
                              
                             }
                               echo '</div>'; 
-                              echo '<br>';
-                              echo '<br>';
-                              echo '<br>';
-                              echo '<br>';
-                              echo '<br>';
+                              echo '<br/>';
+                              echo '<br/>';
+                              echo '<br/>';
+                              echo '<br/>';
+                              echo '<br/>';
                               echo '</div>';
                             
                          $db = null;
@@ -121,12 +121,12 @@
           
   <div class=" col jumbotron jumbotron-fluid text-center">
       <div class="container ps-auto">
-          <h5 class="display-5 headers" style="text-align: center;">How it works?</h5> <br> 
+          <h5 class="display-5 headers" style="text-align: center;">How it works?</h5> <br/>
       </div>
   </div>
       <img src="resources/adoption.png"  class="steps">
-      <br>
-      <br>
+      <br/>
+      <br/>
     
 <!-- Footer -->
 @include('components.footer')

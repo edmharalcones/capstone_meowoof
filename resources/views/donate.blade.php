@@ -31,46 +31,46 @@
         </div>
       </div>
     </div>    
-      <br>
-      <br>
-      <br>
+    <br/>
+    <br/>
+    <br/>
       <div class="container">
         <div class="row">
           <div class="col-4">
         <img src="resources/GCash.png" class="donateimage">
-        <h5 class="donatetext" >Donate via GCash</h5> <br>
+        <h5 class="donatetext" >Donate via GCash</h5> <br/>
           <img src="resources/gcash.jpeg" class="donategcash">
         </div>
         <div class="col-4">
           <img src="resources/UB.png" class="donateimage">
-          <h5 class="donatetext" >Donate via UnionBank</h5> <br>
-          <p class="donatetext2">Account Name: <br> Edmhar Alcones<br> <br>
-          Account Number: <br> 1234-5678-9999</p>
+          <h5 class="donatetext" >Donate via UnionBank</h5> <br/>
+          <p class="donatetext2">Account Name: <br> Edmhar Alcones<br/> <br/>
+          Account Number: <br/> 1234-5678-9999</p>
         </div>
         <div class="col-4">
         <img src="resources/dropoff.png" class="donateimage">
-        <h5 class="donatetext" >Donate in Kind</h5> <br>
-        <p class="donatetext2">You can drop off your donations <br> at our address below:<br>
+        <h5 class="donatetext" >Donate in Kind</h5> <br/>
+        <p class="donatetext2">You can drop off your donations <br/> at our address below:<br/>
           ( Mon-Fri, 9 AM-5 PM )
-             <br>
-             <br>
-        1 Kalayaan St. <br>
-        Binakayan-Kanluran<br>
+          <br/>
+          <br/>
+        1 Kalayaan St. <br/>
+        Binakayan-Kanluran<br/>
         Kawit, Cavite, Philippines
               </p> 
-          <br>
+              <br/>
            
 
         </div>
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>   
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>   
 
 
 

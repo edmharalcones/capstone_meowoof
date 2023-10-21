@@ -28,7 +28,7 @@
 <!-- Navigation bar -->
 @include('components.navbar')
 @include('components.map') 
-<br>
+<br/>
 <!-- Quote -->
 <div class="container-fluid">
   <div class="row">
@@ -36,14 +36,14 @@
       <div class="col-12 col-md-4 d-flex order-md-0">
         <div class="col d-flex flex-column" id="header">
               <h1 style="font-weight: 700; text-align:left;" class="headers">EVERY PET DESERVES A HOME.</h1>
-              <br>
+              <br/>
              <p class="indextext" >Discover the incredible joy of finding your new best friend and creating an unbreakable bond that will warm your heart.
-            <br><br> By choosing adoption, you're not just welcoming a pet into your home; you're becoming a hero, offering a second chance at life to a deserving soul.
+             <br/><br/> By choosing adoption, you're not just welcoming a pet into your home; you're becoming a hero, offering a second chance at life to a deserving soul.
             It's a rewarding experience that will leave an indelible paw print on your heart.
           </p>
          
  
-<br>
+          <br/>
           <div class="d-flex align-items-center justify-content-left" style="padding-top: 20px;">
             <a class="btn-secondary text-nowrap" href="{{ route('pets') }}" role="button">Adopt today!</a>
           </div>
@@ -57,10 +57,10 @@
       </div>
   </div>
 </div>
-  <br>
-  <br>
-  <br>
-  <br>
+<br/>
+<br/>
+<br/>
+<br/>
     <!-- featured pets -->
  
   
@@ -87,15 +87,15 @@
             </div>
       </div>
     </div>
-    <br>
+    <br/>
     <div class="col-12  justify-content-end px-5 d-flex" >
       <a href="{{ route('pets') }}" role="button" class="btn-pets text-nowrap">View all pets</a>
     </div>
   </div>
 
   <!-- Donate -->
-<br>
-<br>
+  <br/>
+  <br/>
 
   <div id="footer" class="py-5"  >
     <div class="container text-center" >
@@ -104,23 +104,23 @@
        </div>
      </div>  
     <!-- Testimonials -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <div class=" col jumbotron jumbotron-fluid text-left" >
       <div class="container-fluid" >
         <h5 class="display-6 d-flex headers" style="position: absolute; left: 9%;" >HAPPY  CLIENTS</h5>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
+    <br/>
+    <br/>
+    <br/>
     <?php
                             $servername = "localhost";
                             $username = "u548574294_root";
@@ -162,14 +162,14 @@
     ?>
     
      
-<br>
-<br>
+    <br/>
+    <br/>
           <div class="d-flex align-items-center justify-content-center" style="padding-top: 20px;">
             <a class="btn-secondary text-nowrap" href="{{ route('review') }}" role="button">Write us a review!</a>
           </div>
 
-<br>
-<br>
+          <br/>
+          <br/>
 
 <!-- Footer -->
 @include('components.footer') 
