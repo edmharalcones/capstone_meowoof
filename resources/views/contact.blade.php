@@ -45,6 +45,7 @@
           <option value="Appointment">Appointment</option>
         </select>
       </div>
+        <br/>
         <div class="col">
           <label for="Message" class="form-label">Message:</label>
           <textarea class="form-control" id="Message" rows="3" name="message" required></textarea>
